@@ -58,4 +58,3 @@ Please read the file `COPYING` included with this software.
 Authors:
 --------
 
-- [Terence Monteiro](terencemo@cpan.org)
