@@ -1,0 +1,37 @@
+--- FamilyController.php
++++ FamilyController.php
+@@ -124,6 +124,7 @@
+                        $model->attributes=$_POST['Families'];
+                        if($model->save()) {
+ #                              $this->redirect(array('view','id'=>$model->id));
++                               $save_it = false;
+                                foreach(array('husband', 'wife', 'dependent') as $person) {
+                                        if(isset($_POST['People'][$person])) {
+                                                $p = new People();
+@@ -134,9 +135,25 @@
+                                                $p->attributes = $_POST['People'][$person];
+                                                $p->family_id = $model->id;
+                                                $p->role = $person;
+-                                               $p->save();
++                                               if ($p->save()) {
++                                                       switch ($person) {
++                                                               case 'husband': if (!isset($model->husband_id)) {
++                                                                       $model->husband_id = $p->id;
++                                                                       $save_it = true;
++                                                               }
++                                                               break;
++                                                               case 'wife': if (!isset($model->wife_id)) {
++                                                                       $model->wife_id = $p->id;
++                                                                       $save_it = true;
++                                                               }
++                                                               break;
++                                                       }
++                                               }
+                                        }
+                                }
++                               if ($save_it) {
++                                       $model->save();
++                               }
+ 
+                                if (isset($_POST['People']['child'])) {
+                                        for($i = 0; $i < 4; ++$i) {

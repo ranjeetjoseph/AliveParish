@@ -1,0 +1,99 @@
+/*
+ *  This file is part of Alive Parish Software
+ * 
+ *  Alive Parish - software to manage tomorrow's parish
+ *  Copyright (C) 2013  Redemptorist Media Center
+ * 
+ *  Alive Parish Software is free software: you can redistribute it
+ *  and/or modify it under the terms of the GNU General Public License as
+ *  published by the Free Software Foundation, either version 3 of the
+ *  License, or (at your option) any later version.
+ * 
+ *  Alive Parish Software is distributed in the hope that it will
+ *  be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ *  of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+table.e-calendar-view,
+table.e-calendar-view th, 
+table.e-calendar-view td {
+  border-style: solid;
+  border-color: #88a;
+}
+
+table.e-calendar-view tr.month-year-row a.navigation-link {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 180%;
+}
+
+table.e-calendar-view { border-width: 1px 0 0 1px; }
+
+table.e-calendar-view thead th,
+table.e-calendar-view tbody td {
+  padding: 4px 5px;
+  text-align: right;
+  padding-right: 15px;
+  border-width: 0 1px 1px 0;
+}
+
+table.e-calendar-view tr.weekdays-row th {
+  font-size: 110%;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(60, 80, 90);
+}
+table.e-calendar-view thead th.month-year {
+  font-size: 160%;
+  text-align: center;
+  color: rgb(50, 70, 90);
+}
+
+table.e-calendar-view td.current {
+  font-weight: bold;
+}
+
+table.e-calendar-view td.not-relevant {
+  color: rgb(221, 221, 221);
+}
+
+table.e-calendar-view td {
+  height: 70px;
+  width: 91px;
+}
+
+table.e-calendar-view td a.dt {
+  font-size: 150%;
+  color: rgb(30, 30, 100);
+}
+
+table.e-calendar-view td a.dt.special {
+  color: rgb(160, 50, 50);
+}
+
+span.mass, a.mass {
+	display: block;
+}
+
+a.booked {
+	color: rgb(180, 110, 250);
+}
+
+div.mass {
+	float: left;
+	font-size: 70%;
+  position: relative;
+}
+
+div.mass div.right {
+  position: absolute;
+  left: 45px;
+}
+
+div.mass a,
+a.dt {
+  text-decoration: none;
+}
